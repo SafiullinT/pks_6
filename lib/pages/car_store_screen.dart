@@ -28,11 +28,17 @@ class _CarStoreScreenState extends State<CarStoreScreen> {
     });
   }
 
+  void _showSnackBar(String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(message)),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Car Store'),
+        title: Text('Магазин автомобилей'),
       ),
       body: widget.cars.isEmpty
           ? Center(child: Text('Нет автомобилей в магазине'))
@@ -57,12 +63,18 @@ class _CarStoreScreenState extends State<CarStoreScreen> {
                   builder: (context) => CarDetailScreen(
                     car: car,
                     onDeleteCar: () => _deleteCar(car),
-                    addToCart: (car) => widget.addToCart(car),
+                    addToCart: (car) {
+                      widget.addToCart(car);
+                      _showSnackBar('${car.name} добавлен в корзину');
+                    },
                   ),
                 ),
               );
             },
-            onAddToCart: () => widget.addToCart(car),
+            onAddToCart: () {
+              widget.addToCart(car);
+              _showSnackBar('${car.name} добавлен в корзину');
+            },
           );
         },
       ),

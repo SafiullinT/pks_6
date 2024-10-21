@@ -77,6 +77,13 @@ class _CarStoreAppState extends State<CarStoreApp> {
     });
   }
 
+  void removeFromFavorites(Car car) {
+    setState(() {
+      favoriteCars.remove(car);
+      car.isFavorite = false;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -95,6 +102,7 @@ class _CarStoreAppState extends State<CarStoreApp> {
             FavoriteCarsScreen(
               favoriteCars: favoriteCars,
               onAddToCart: addToCart,
+              onRemoveFromFavorites: removeFromFavorites,
             ),
             ProfileScreen(),
           ],
