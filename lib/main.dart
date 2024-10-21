@@ -44,7 +44,7 @@ class _CarStoreAppState extends State<CarStoreApp> {
 
   void addCar(Car newCar) {
     setState(() {
-      addToCart(newCar);
+      cars.add(newCar);
     });
   }
 
