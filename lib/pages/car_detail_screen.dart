@@ -4,12 +4,12 @@ import '../models/car.dart';
 class CarDetailScreen extends StatelessWidget {
   final Car car;
   final VoidCallback onDeleteCar;
-  final Function(Car) addToCart; // Добавляем функцию
+  final Function(Car) addToCart;
 
   CarDetailScreen({
     required this.car,
     required this.onDeleteCar,
-    required this.addToCart, // Инициализация функции
+    required this.addToCart,
   });
 
   @override
@@ -51,7 +51,7 @@ class CarDetailScreen extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.shopping_cart),
             onPressed: () {
-              addToCart(car); // Добавляем автомобиль в корзину
+              addToCart(car);
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(content: Text('${car.name} добавлен в корзину')),
               );

@@ -33,7 +33,6 @@ class FavoriteCarsScreen extends StatelessWidget {
               onPressed: () => onAddToCart(car),
             ),
             onTap: () {
-              // Действие при нажатии на элемент
             },
           );
         },

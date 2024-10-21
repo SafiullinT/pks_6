@@ -8,13 +8,13 @@ class CarStoreScreen extends StatefulWidget {
   final List<Car> cars;
   final Function addCar;
   final Function toggleFavorite;
-  final Function addToCart; // Добавлено
+  final Function addToCart;
 
   CarStoreScreen({
     required this.cars,
     required this.addCar,
     required this.toggleFavorite,
-    required this.addToCart, // Добавлено
+    required this.addToCart,
   });
 
   @override
@@ -57,12 +57,12 @@ class _CarStoreScreenState extends State<CarStoreScreen> {
                   builder: (context) => CarDetailScreen(
                     car: car,
                     onDeleteCar: () => _deleteCar(car),
-                    addToCart: (car) => widget.addToCart(car), // Передаем функцию
+                    addToCart: (car) => widget.addToCart(car),
                   ),
                 ),
               );
             },
-            onAddToCart: () => widget.addToCart(car), // Добавлено
+            onAddToCart: () => widget.addToCart(car),
           );
         },
       ),

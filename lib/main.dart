@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'pages/car_store_screen.dart';
-import 'pages/add_car_screen.dart';
 import 'pages/favorite_cars_screen.dart';
 import 'pages/profile_screen.dart';
 import 'models/car.dart';
@@ -41,11 +40,11 @@ class _CarStoreAppState extends State<CarStoreApp> {
   ];
 
   List<Car> favoriteCars = [];
-  List<Car> cart = []; // Добавляем корзину
+  List<Car> cart = [];
 
   void addCar(Car newCar) {
     setState(() {
-      addToCart(newCar); // Добавление нового автомобиля в корзину
+      addToCart(newCar);
     });
   }
 
@@ -64,10 +63,10 @@ class _CarStoreAppState extends State<CarStoreApp> {
   void addToCart(Car car) {
     setState(() {
       if (cart.contains(car)) {
-        car.quantity++; // Увеличиваем количество, если товар уже в корзине
+        car.quantity++;
       } else {
-        cart.add(car); // Добавляем товар в корзину
-        car.quantity = 1; // Устанавливаем количество
+        cart.add(car);
+        car.quantity = 1;
       }
     });
   }
@@ -89,13 +88,13 @@ class _CarStoreAppState extends State<CarStoreApp> {
             CarStoreScreen(
               cars: cars,
               addCar: addCar,
-              toggleFavorite: toggleFavorite, // Передаём toggleFavorite
-              addToCart: addToCart, // Передаём addToCart для работы с корзиной
+              toggleFavorite: toggleFavorite,
+              addToCart: addToCart,
             ),
-            CartScreen(cart: cart, removeFromCart: removeFromCart), // Передаём корзину
+            CartScreen(cart: cart, removeFromCart: removeFromCart),
             FavoriteCarsScreen(
               favoriteCars: favoriteCars,
-              onAddToCart: addToCart, // Передаём onAddToCart
+              onAddToCart: addToCart,
             ),
             ProfileScreen(),
           ],
@@ -107,11 +106,11 @@ class _CarStoreAppState extends State<CarStoreApp> {
               _currentIndex = index;
             });
           },
-          backgroundColor: Colors.white, // Устанавливаем белый фон для навигации
-          selectedItemColor: Colors.black, // Чёрный цвет для выбранного элемента
-          unselectedItemColor: Colors.black, // Чёрный цвет для невыбранных элементов
-          showSelectedLabels: true, // Показываем текст для выбранных элементов
-          showUnselectedLabels: true, // Показываем текст для невыбранных элементов
+          backgroundColor: Colors.white,
+          selectedItemColor: Colors.black,
+          unselectedItemColor: Colors.black,
+          showSelectedLabels: true,
+          showUnselectedLabels: true,
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.store), label: 'Магазин'),
             BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Корзина'),

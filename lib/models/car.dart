@@ -8,7 +8,7 @@ class Car {
   final String engineType;
   final String maxSpeed;
   bool isFavorite;
-  int quantity;  // Добавляем количество
+  int quantity;
 
   Car(
       this.name,
@@ -20,6 +20,6 @@ class Car {
       this.engineType,
       this.maxSpeed, {
         this.isFavorite = false,
-        this.quantity = 0,  // Устанавливаем начальное количество
+        this.quantity = 0,
       });
 }

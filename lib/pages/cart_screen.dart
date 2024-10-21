@@ -36,7 +36,7 @@ class _CartScreenState extends State<CartScreen> {
               itemBuilder: (context, index) {
                 final car = widget.cart[index];
                 return Slidable(
-                  key: ValueKey(car), // Уникальный ключ
+                  key: ValueKey(car),
                   startActionPane: ActionPane(
                     motion: ScrollMotion(),
                     children: [
@@ -51,7 +51,7 @@ class _CartScreenState extends State<CartScreen> {
                   ),
                   child: ListTile(
                     leading: Image.network(car.imageUrl, width: 50, height: 50),
-                    title: Text(car.name), // Название автомобиля
+                    title: Text(car.name),
                     subtitle: Text('\$${(car.price * car.quantity).toStringAsFixed(2)}'),
                     trailing: Row(
                       mainAxisSize: MainAxisSize.min,
@@ -61,9 +61,9 @@ class _CartScreenState extends State<CartScreen> {
                           onPressed: () {
                             setState(() {
                               if (car.quantity > 1) {
-                                car.quantity--; // Уменьшаем количество
+                                car.quantity--;
                               } else {
-                                widget.removeFromCart(car); // Удаляем из корзины
+                                widget.removeFromCart(car);
                               }
                             });
                           },
@@ -73,7 +73,7 @@ class _CartScreenState extends State<CartScreen> {
                           icon: Icon(Icons.add),
                           onPressed: () {
                             setState(() {
-                              car.quantity++; // Увеличиваем количество
+                              car.quantity++;
                             });
                           },
                         ),

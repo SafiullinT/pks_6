@@ -81,12 +81,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
             TextButton(
               onPressed: () {
                 _updateProfile();
-                Navigator.of(context).pop(); // Закрыть диалог
+                Navigator.of(context).pop();
               },
               child: Text('Сохранить'),
             ),
             TextButton(
-              onPressed: () => Navigator.of(context).pop(), // Закрыть диалог
+              onPressed: () => Navigator.of(context).pop(),
               child: Text('Отмена'),
             ),
           ],
@@ -103,7 +103,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         actions: [
           IconButton(
             icon: Icon(Icons.edit),
-            onPressed: _showEditProfileDialog, // Открытие диалога редактирования
+            onPressed: _showEditProfileDialog,
           ),
         ],
       ),
