@@ -1,16 +1,22 @@
-# pks_6
+# Практическая работа 6 ПКС
 
-A new Flutter project.
+## Сафиуллин Тимур Иванович ЭФБО-03-22
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Главная страница
+![Главная страница](https://github.com/SafiullinT/pks_6/blob/master/images/1.jpg)
+## Страница товара
+![Страница товара](https://github.com/SafiullinT/pks_6/blob/master/images/2.jpg)
+## Добавление товара в корзину со страницы товара
+![Добавление товара](https://github.com/SafiullinT/pks_6/blob/master/images/3.jpg)
+## Страница корзина
+![Корзина](https://github.com/SafiullinT/pks_6/blob/master/images/4.jpg)
+## Изменение количества товара в корзине
+![Изменение количества товара](https://github.com/SafiullinT/pks_6/blob/master/images/5.jpg)
+## Отображение нескольких товаров в корзине
+![Профиль](https://github.com/SafiullinT/pks_6/blob/master/images/9.jpg)
+## Добавление в избранное
+![Доб. избранное](https://github.com/SafiullinT/pks_6/blob/master/images/5.jpg)
+## Профиль
+![Профиль](https://github.com/SafiullinT/pks_6/blob/master/images/7.jpg)
+## Изменение информации в профиле
+![Профиль](https://github.com/SafiullinT/pks_6/blob/master/images/8.jpg)
